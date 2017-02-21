@@ -1,0 +1,7 @@
+<%= raw @resources.map {|resource| {
+      'id' => resource.id,
+      'label' => "#{resource.tracker} ##{resource.id}: #{resource.subject.to_s.truncate(60)}",
+      'value' => resource.id
+      }
+    }.to_json
+%>
